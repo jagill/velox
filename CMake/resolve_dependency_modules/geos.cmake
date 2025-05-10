@@ -41,6 +41,8 @@ endif()
 
 FetchContent_MakeAvailable(geos)
 
+add_library(GEOS::geos ALIAS geos)
+
 unset(BUILD_SHARED_LIBS)
 set(CMAKE_CXX_FLAGS ${PREVIOUS_CMAKE_CXX_FLAGS})
 set(CMAKE_BUILD_TYPE ${PREVIOUS_BUILD_TYPE})
