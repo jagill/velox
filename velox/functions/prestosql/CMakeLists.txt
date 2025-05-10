@@ -76,7 +76,8 @@ velox_link_libraries(
   stemmer::stemmer)
 
 if(VELOX_ENABLE_GEO)
-  velox_link_libraries(velox_functions_prestosql_impl geos)
+  add_subdirectory(geospatial)
+  velox_link_libraries(velox_functions_prestosql_impl velox_functions_geo)
 endif()
 
 if(NOT VELOX_MONO_LIBRARY)
